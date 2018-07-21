@@ -40,7 +40,7 @@ The ans should give 2
 Input = [1, 2, 0] 
 The ans should give 3
 
-### Problem 5:
+#### Problem 5:
 cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair.
 
 Example: 
