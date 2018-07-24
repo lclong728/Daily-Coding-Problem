@@ -7,7 +7,7 @@ Created on Mon Jul 23 00:25:32 2018
 
 """
 DailyCodingProblem #6
-19/07/2018
+22/07/2018
 Asked by: Google
 
 An XOR linked list is a more memory efficient doubly linked list. 
@@ -41,13 +41,13 @@ class Node(object):
     
     def prev_node(self, next_address):
         return self.both ^ next_address
-    
+        
 
 class XORLinkedList(object):
     
     def __init__(self):
         self.memory = [Node(None, -1, -1)] ## init the Node when nothing in the Linked List
-    
+
         
     def add(self, val):
         current_node_idx = 0
