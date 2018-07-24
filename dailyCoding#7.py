@@ -20,7 +20,7 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 
 def counting(data, length, control_lst):
     if length <= 1:
-        if int(data) != 0: 
+        if data != '0':
             return 1
         else:
             return 0
@@ -30,13 +30,13 @@ def counting(data, length, control_lst):
         return control_lst[length]
     else:
         result = counting(data, length-1, control_lst)
-        if int(data[0:1]) <= 26:
+        if int(data[0:2]) <= 26:
             result += counting(data, length -2, control_lst)
         return result
-    
+
 def num_ways(data):
     control_lst = [None]*(len(data)+1) ## initing a list with all null to control the repeatants
     return counting (data, len(data), control_lst)
         
-print(num_ways("123212"))
+print(num_ways("8888"))
     
