@@ -69,3 +69,32 @@ count the number of ways it can be decoded.
 Example:
 The message '111' would return 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
 You can assume that the messages are decodable. For example, '001' is not allowed.
+
+#### Problem 8:
+##### Asked by: Google
+A unival tree (which stands for "universal value") is a tree where all nodes under it have the same value.
+Given the root to a binary tree, count the number of unival subtrees.
+
+Example:
+The following tree has 5 unival subtrees:
+
+   0
+  / \
+ 1   0
+    / \
+   1   0
+  / \
+ 1   1
+
+#### Problem 9:
+##### Asked by: Airbnb
+Given a list of integers, write a function that returns the largest sum of non-adjacent numbers. 
+Numbers can be 0 or negative.
+
+Example: 
+[2, 4, 6, 2, 5] should return 13, since we pick 2, 6, and 5. 
+[5, 1, 1, 5] should return 10, since we pick 5 and 5.
+
+#### Problem 10:
+##### Asked by: Apple
+Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
