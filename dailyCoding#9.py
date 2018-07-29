@@ -26,7 +26,7 @@ def helper(array, idx, max_sum):
         while idx + position_para < len(array):
             if array[idx] + array[idx + position_para] > max_sum:
                 max_sum = array[idx] + array[idx + position_para]
-            position_para += 1
+            position_para += 1 
         return helper(array, idx + 1, max_sum)
     else:
         return max_sum
