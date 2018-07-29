@@ -38,5 +38,5 @@ def num_ways(data):
     control_lst = [None]*(len(data)+1) ## initing a list with all null to control the repeatants
     return counting (data, len(data), control_lst)
         
-print(num_ways("8888"))
+print(num_ways("88"))
     
