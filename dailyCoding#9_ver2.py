@@ -43,7 +43,10 @@ def find_list_max(array):
 def before_max_sum(before_array, before_max_sum):
     
     if len(before_array) == 1:
-        return before_max_sum + before_array[0]
+        if before_array[0] > 0:
+            return before_max_sum + before_array[0]
+        else:
+            return before_max_sum
     elif len(before_array) == 0:
         return before_max_sum
     else:
@@ -54,7 +57,10 @@ def before_max_sum(before_array, before_max_sum):
 def after_max_sum(after_array, after_max_sum):
     
     if len(after_array) == 1:
-        return after_max_sum + after_array[0]
+        if after_array[0] > 0 :
+            return after_max_sum + after_array[0]
+        else:
+            return after_max_sum
     elif len(after_array) == 0:
         return after_max_sum
     else:
