@@ -23,16 +23,19 @@ def maximum_sum(array):
     return router(array, init_max_idx, init_max_num)
     
 def router(array, idx, max_sum):
-    if idx-2 < 0:
-        if idx + 2 < len(array):
-            return max_sum + after_max_sum(array[idx+2:], 0)
-        else:
-             return max_sum
+    if len([*filter(lambda x: x < 0, array)]) == len(array):
+        return max_sum
     else:
-        if idx + 3 > len(array):
-            return max_sum + before_max_sum(array[0:idx-1], 0)
+        if idx-2 < 0:
+            if idx + 2 < len(array):
+                return max_sum + after_max_sum(array[idx+2:], 0)
+            else:
+                 return max_sum
         else:
-            return max_sum + before_max_sum(array[0:idx-1], 0) + after_max_sum(array[idx+2:], 0)
+            if idx + 3 > len(array):
+                return max_sum + before_max_sum(array[0:idx-1], 0)
+            else:
+                return max_sum + before_max_sum(array[0:idx-1], 0) + after_max_sum(array[idx+2:], 0)
     
 def find_list_max(array):
     return max([i for i, j in enumerate(array) if j == max(array)]), max(array) ## return tuple
@@ -60,4 +63,4 @@ def after_max_sum(after_array, after_max_sum):
         return router(after_array, after_max_idx, after_max_sum)
     
         
-print(maximum_sum([1,2,3,4,2,2,2,4]))
+print(maximum_sum([-6,-5,-4,-3,-1,-2]))
