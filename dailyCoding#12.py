@@ -7,7 +7,7 @@ Created on Sun Jul 29 23:08:16 2018
 
 """
 DailyCodingProblem #12
-27/07/2018
+28/07/2018
 Asked by: Amazon
 
 There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a time. 
